@@ -1,0 +1,58 @@
+
+
+    
+
+<center>
+
+     <body style = "background-color:Aquamarine;">  
+
+       
+
+          <h3>Login Form</h3>
+  
+
+<form action='' method='POST'><br><br>
+
+     {% csrf_token %}  
+
+     <input type='text' name= 'username'  placeholder='username'><br><br>
+
+     <input type='password'  name= 'password'  placeholder='password'><br><br> 
+
+    
+        <body>
+    
+        <button class="button login">login</button> 
+        <style>
+          .button {
+            background-color:#555555; /* Black */
+            border: none;
+            color: white;
+            padding: 2px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+          }
+          
+          .button {background-color: #555555;} /* Black */
+          </style>
+        
+
+     <input class='btn login_btn' type='submit' value='login'> 
+     
+     
+</form>  
+
+     <h2>create   a   NEW ACCOUNT  buddy......? </h2>
+     
+     <a href = "{% url 'signup' %}">signup</a>   
+
+    
+     
+</body> 
+</center>
+ 
+</html>

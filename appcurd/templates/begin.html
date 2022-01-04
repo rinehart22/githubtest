@@ -1,0 +1,146 @@
+
+{% extends 'base.html'%}
+
+    {% block go %}  
+    
+    
+
+    <div class = 'container'> 
+        <div style = "background-color:Lavender;">
+        <table class = 'table'>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>place</th>
+                    <th>serving</th>
+                </tr> 
+                 <tr> 
+                    <th>id</th>
+                    <th>name</th> 
+                    <th>learn</th> 
+                    <th>design</th> 
+                </tr>
+                <tr>
+                    <th>id</th>
+                    <th>type</th>
+                    <th>color</th>
+                    <th>breed</th> 
+                </tr> 
+                <tr> 
+                    <th>id</th> 
+                    <th>fit</th> 
+                </tr> 
+                <tr> 
+                    <th>id</th> 
+                    <th>full</th> 
+                    <th>man</th> 
+                    <th>sem</th> 
+                </tr> 
+                <tr> 
+                    <th>id</th> 
+                    <th>cel</th> 
+                    <th>wish</th> 
+                    <th>tq</th>
+                </tr> 
+                <tr> 
+                    <th>id</th> 
+                    <th>brand</th> 
+                    <th>ver</th> 
+                </tr>  
+
+            </thead>
+            <tbody> 
+                {% for i in x %}
+                <tr class = 'success'>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.place}}</td>
+                    <td>{{i.serving}}</td> 
+                    <td> <a href = "{% url 'delete' i.id %}">delete</a></td>
+                    <td> <a href = "{% url 'read' i.id %}">read</a></td>
+                </tr> 
+                {% endfor %} 
+
+                {% for i in y %} 
+                <tr class = 'info'> 
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td> 
+                    <td>{{i.learn}}</td> 
+                    <td>{{i.design}}</td> 
+                    <td> <a href = "{% url 'delete' i.id %}">delete</a></td>
+                    <td> <a href = "{% url 'read' i.id %}">read</a></td>
+                </tr> 
+                {% endfor %}
+
+                {% for i in z %}
+                <tr class = 'danger'> 
+                    <td>{{i.id}}</td> 
+                    <td>{{i.type}}</td> 
+                    <td>{{i.color}}</td> 
+                    <td>{{i.breed}}</td> 
+                    <td> <a href = "{% url 'delete' i.id %}">delete</a></td>
+                    <td> <a href= "{% url 'read' i.id %}">read</a></td> 
+                </tr> 
+                {% endfor %}
+
+                {% for i in w %} 
+                <tr class = 'success'> 
+                    <td>{{i.id}}</td>
+                    <td>{{i.fit}}</td>
+                    <td><a href = "{% url 'delete' i.id %}">delete</a></td> 
+                    <td><a href = "{% url 'read' i.id %}">read</a></td> 
+                </tr>
+
+                {% endfor %} 
+                {% for i in v %}
+                <tr class = 'info'> 
+                    <td>{{i.id}}</td> 
+                    <td>{{i.fit}}</td> 
+                    <td><a href = "{% url 'delete' i.id %}">delete</a></td> 
+                    <td><a href = "{% url 'read' i.id %}">read</a></td>
+                </tr>  
+                {% endfor %}
+                {% for i in u %}
+                <tr class = 'danger'> 
+                    <td>{{i.id}}</td> 
+                    <td>{{i.full}}</td> 
+                    <td>{{i.man}}</td> 
+                    <td>{{i.sem}}</td> 
+                    <td> <a href = "{% url 'delete' i.id %}">delete</a></td>
+                    <td> <a href= "{% url 'read' i.id %}">read</a></td>  
+                </tr> 
+                {% endfor %}
+                {% for i in t %}
+                <tr class = 'info'> 
+                    <td>{{i.id}}</td>
+                    <td>{{i.cel}}</td> 
+                    <td>{{i.wish}}</td> 
+                    <td>{{i.tq}}</td> 
+                    <td><a href = "{% url 'delete' i.id %}">delete</a></td> 
+                    <td><a href = "{% url 'read' i.id %}">read</a></td> 
+                </tr> 
+                {% endfor %}
+                {% for i in s %}
+                <tr class = 'info'> 
+                    <td>{{i.id}}</td> 
+                    <td>{{i.brand}}</td> 
+                    <td>{{i.ver}}</td> 
+                    <td><a href = "{% url 'delete' i.id %}">delete</a></td> 
+                    <td><a href = "{% url 'read' i.id%}">read</a></td> 
+                </tr> 
+                {% endfor %}
+            </tbody> 
+        </table>
+    </div> 
+    {% endblock go %}
+</body> 
+</html> 
+
+
+
+
+
+
+
+
